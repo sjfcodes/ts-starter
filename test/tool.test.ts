@@ -1,8 +1,8 @@
 /**
  * @group ut
  */
-import { tool } from "../src/tool";
+import { tool } from '../src/tool';
 
-test("should return arg", () => {
-  expect(tool("hello")).toEqual("hello");
+test('should return arg', () => {
+    expect(tool('hello')).toEqual('hello');
 });
