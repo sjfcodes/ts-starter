@@ -1,10 +1,17 @@
 {
     "root": true,
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
+    "parserOptions": {
+        "sourceType": "module"
+    },
     "extends":[
         "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended"
+        "plugin:@typescript-eslint/recommended",
+        "prettier" // turns off eslint rules if conflict with prettier
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "@stylistic/ts"
     ],
     "rules": {}
 }
