@@ -1,0 +1,18 @@
+body {
+    font-size: 24px;
+    width: 100vw;
+}
+
+#app {
+    width: 80vw;
+    margin: 0 auto;
+    border: 1px solid orange;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+#buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
