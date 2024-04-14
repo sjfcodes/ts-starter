@@ -33,21 +33,17 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     next();
 });
 
-const history: Record<string,string>[] = [];
 app.get('/get', (req: Request, res: Response) => {
-    res.json({ status: 200, message: "response from '/get'", history });
+    res.json({ status: 200, message: "response from '/get'" });
 });
 app.post('/post', (req: Request, res: Response) => {
-    if (req.body) history.push(req.body)
-        res.json({ status: 200, message: "response from '/post'", history });
+    res.json({ status: 200, message: "response from '/post'" });
 });
 app.put('/put', (req: Request, res: Response) => {
-    if (req.body) history.push(req.body)
-        res.json({ status: 200, message: "response from '/put'", history });
+    res.json({ status: 200, message: "response from '/put'" });
 });
 app.delete('/delete', (req: Request, res: Response) => {
-    history.pop();
-    res.json({ status: 200, message: "response from '/delete'", history });
+    res.json({ status: 200, message: "response from '/delete'" });
 });
 
 /**
